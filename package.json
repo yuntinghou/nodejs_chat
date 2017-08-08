@@ -1,0 +1,9 @@
+{
+  "name": "chatting",
+  "version": "0.0.1",
+  "description": "Minimalist multiroom chat server",
+  "dependencies": {
+    "socket.io": "*",
+    "mime": "^1.3.6"
+  }
+}
