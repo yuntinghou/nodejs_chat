@@ -55,7 +55,7 @@ var server = http.createServer(function(req, res) {
     var absPath = './' + filePath;
     serveStatic(res, cache, absPath);
 });
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 var chatServer = require('./lib/chat_server');
 chatServer.listen(server);
 

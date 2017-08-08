@@ -48,13 +48,13 @@ $(function() {
     });
     socket.on('rooms', function(rooms) {
         $('#room-list').empty();
-        for (var room in rooms) {
-            room = room.substring(1, room.length);
-            if (room !== '')
-                $('#room-list').append(divEscapedContentElement(room));
+        for (var idx in rooms) {
+            //room = room.substring(1, room.length);
+            $('#room-list').append(divEscapedContentElement(rooms[idx]));
         }
         $('#room-list div').click(function() {
-            chatApp.processCommand('/join' + $(this).text());
+            console.log($(this).text());
+            chatApp.processCommand('/join ' + $(this).text());
             $('#send-message').focus();
         });
     });
