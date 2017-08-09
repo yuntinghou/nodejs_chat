@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatting server</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <<link rel="stylesheet" href="stylesheets/my.css">
 </head>
 <body>
-    <div id="content">
-        <div id="room"></div>
-        <div id="room-list"></div>
-        <div id="messages"></div>
-
-        <form id="send-form">
-            <input id="send-message">
-            <input id="send-button" type="submit" value="Send">
-            <div id="help">
-                Chat Commands:
-                <ul>
-                    <li>Change nickname: <code>/nick [username]</code></li>
-                    <li>Join/create room: <code>/join [room name]</code></li>
-                </ul>
+    <div id="content" class="container">
+        <div class="jumbotron"><h1 id="room"></h1></div>
+        <div class="row" style="height: 200px">
+            <div class="col-md-9" style="height: 200px;overflow:auto">
+                <div id="messages"></div>
             </div>
-        </form>
+            <div class="col-md-3">
+                <div id="room-list"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="send-form">
+                    <input id="send-message">
+                    <input id="send-button" type="submit" value="Send">
+                    <div id="help">
+                        Chat Commands:
+                        <ul>
+                            <li>Change nickname: <code>/nick [username]</code></li>
+                            <li>Join/create room: <code>/join [room name]</code></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./javascripts/jquery.js"></script>
