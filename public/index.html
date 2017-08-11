@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <title>Chatting server</title>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
-    <<link rel="stylesheet" href="stylesheets/my.css">
+    <link rel="stylesheet" href="stylesheets/my.css">
 </head>
 <body>
     <div id="content" class="container">
-        <div class="jumbotron"><h1 id="room"></h1></div>
+        <h1 id="room" class="text-center"></h1>
         <div class="row" style="height: 200px">
             <div class="col-md-9" style="height: 200px;overflow:auto">
-                <div id="messages"></div>
+                <div class="well">
+                    <div id="messages"></div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <div id="room-list"></div>
+            <div class="col-md-3" style="height: 200px;overflow:auto">
+                <div class="well" style="background-color: #9acfea">
+                    <div id="room-list"></div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <form id="send-form">
-                    <input id="send-message">
-                    <input id="send-button" type="submit" value="Send">
-                    <div id="help">
-                        Chat Commands:
-                        <ul>
-                            <li>Change nickname: <code>/nick [username]</code></li>
-                            <li>Join/create room: <code>/join [room name]</code></li>
-                        </ul>
-                    </div>
-                </form>
+        <div class="well" style="background-color: #dbdbdb">
+            <div class="row">
+                <div class="col-md-12">
+                    <form id="send-form">
+                        <input id="send-message">
+                        <input id="send-button" type="submit" value="Send">
+                        <div id="help">
+                            Chat Commands:
+                            <ul>
+                                <li>Change nickname: <code>/nick [username]</code></li>
+                                <li>Join/create room: <code>/join [room name]</code></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
